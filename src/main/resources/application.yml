@@ -16,4 +16,4 @@ spring:
                 show-sql: true
                 format-sql: true
         hibernate:
-            ddl-auto: create-drop
+            ddl-auto: create-drop # 테이블 생성하고 drop 해주는 옵션 -> 키고 끌때마다
