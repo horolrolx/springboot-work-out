@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import java.time.LocalDateTime;
 import java.util.*;
@@ -20,8 +21,8 @@ public class PostController {
     private final PostService postService;
 
     @GetMapping("/list")
-    public List<Post> postList() {
-        return postService.postList();
+    public List<Post> postList(@RequestParam String title) {
+        return postService.postList(title);
     }
     
     @GetMapping("/{postId}")

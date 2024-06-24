@@ -17,3 +17,11 @@ spring:
                 format-sql: true
         hibernate:
             ddl-auto: create-drop # 테이블 생성하고 drop 해주는 옵션 -> 키고 끌때마다
+mybatis:
+    mapper-locations: classpath:mybatis/mapper/h2/**/**.xml
+    type-handlers-package: com.springboot.springboot_work_out.mapper.typehandler
+    type-aliases-package: com.springboot.springboot_work_out.model
+    configuration:
+        map-underscore-to-camel-case: true
+        default-statement-timeout: 30
+        default-fetch-size: 300
